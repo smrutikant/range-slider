@@ -1,0 +1,157 @@
+body{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background:whitesmoke;
+    flex-direction: column;
+}
+#fixed-rating{
+    position: absolute;
+    height:100%;
+    background: rgba(0,0,0,.9);
+    z-index: 3;
+}
+.numberholder{
+    height:100%;
+    width:100%;
+    position: relative;
+}    
+.numberholder span{
+    position: absolute;
+    bottom:-20px;
+    font-size: 17px;
+    font-weight: bold;
+    color:#000;
+}
+.mo,.mp5,.zerop{
+    left:0;
+}
+.p5,.po{
+    right:0;
+}
+.toleft{
+    left:0;
+}
+.toright{
+    right:0;
+}
+
+#mp5,#p5{
+    display: none;
+}
+#gray-wrapper{
+    width:80%;
+    height:40px;
+    /*
+    background: #F50202;
+    background: -webkit-linear-gradient(left, #F50202, #27D774);
+    background: -moz-linear-gradient(left, #F50202, #27D774);
+    background: linear-gradient(to right, #F50202, #27D774);
+    */
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(82,231,65,1) 100%);
+    
+    border-radius: 40px;
+    position: relative;
+    cursor:pointer;
+    z-index: 1;
+    /*box-shadow: inset 0px 1px 18px 2px rgb(0 0 0 / 60%);*/
+    margin:auto;
+}
+
+.gradiant-wrapper{
+    position: absolute;
+    top:0;
+    height:100%;
+    z-index: 2;
+    background: darkgray;
+    transition: all .6s;
+    width: 25%;
+
+}
+.gradiant-wrapper:hover{
+    /*background: transparent;*/
+}
+.gradiant-wrapper.towards-left{
+    border-radius: 40px 0px 0px 40px;
+}
+#slide-wrapper-p1{
+    left:0;
+    border-radius: 40px 0px 0px 40px;
+}
+
+#slide-wrapper-p2{
+    left:25%;
+    border-radius: 0px;
+}
+
+#slide-wrapper-p3{
+    left:50%;
+    border-radius: 0px;
+}
+
+#slide-wrapper-p4{
+    left:75%;
+    border-radius: 0px 40px 40px 0px;
+}
+.point-eoji-holder{
+    position: absolute;
+    top:-20px;
+    width: 100%;
+    left:0;
+    height:3px;
+    background: darkgray;
+    border-radius: 3px;
+}
+.emoji-container{
+    position:relative;
+    width:100%;
+    height:100%;
+    left:0;
+}
+.point{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: gray;
+    border-radius: 50%;
+    top: -3.5px;
+    transition: all .4s;
+}
+#point1{
+    left:0px;
+}
+#point2{
+    left:calc(25% - 5px);
+}
+#point3{
+    left:calc(50% - 5px);
+}
+#point4{
+    right:calc(25% - 5px);
+}
+#point5{
+    right:0px;
+}
+.point.active-point{
+    /*width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    top: -13.5px !important;
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theemoji{
+    display: none;
+}
+.active-point .theemoji{
+    font-size: 25px;
+    margin-top:-3px;
+    display: block !important;
+}
